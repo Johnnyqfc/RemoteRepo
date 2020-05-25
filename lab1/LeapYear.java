@@ -13,7 +13,7 @@ public class LeapYear {
             System.out.printf("%d is not a leap year.\n", year);
         }
     }
-	
+	/**Function of isLeapYear*/
 	public static boolean isLeapYear(int year){
 		if (year % 4 == 0){
 			return true;
