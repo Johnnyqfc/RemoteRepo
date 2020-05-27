@@ -8,7 +8,7 @@ public class Body{
 	public double yyVel; 
 	public double mass;
 	public String imgFileName; //
-	public static double g = 6.673e-11;
+	public static double g = 6.67e-11;
 
 	public Body(double xP, double yP, double xV, double yV, double m, String img){
 		xxPos = xP;
@@ -96,5 +96,10 @@ public class Body{
 		yyVel+= a_Y * dt;
 		xxPos+= xxVel*dt;
 		yyPos+= yyVel*dt;
+	}
+
+	public void draw(){
+		//The command StdDraw.picture(x, y, filename) plots the image in the given filename
+		StdDraw.picture(this.xxPos, this.yyPos, "images/" + this.imgFileName);
 	}
 }
